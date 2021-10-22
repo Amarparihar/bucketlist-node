@@ -16,7 +16,7 @@ const app = express();
 
 
 const routes = require("./bucketlistRoutes");
-const studentRoute = require("./studentRoutes");
+
 
 const URL = process.env.dbURL || "mongodb://localhost:27017";
 const DB = "quizdatabase";
@@ -26,7 +26,7 @@ console.log(URL);
 app.use(express.json());
 app.use(cors());
 app.use("/bucketlist" , routes);
-app.use("/student" , studentRoute);
+
 
 
 const transporter = nodeMailer.createTransport({
