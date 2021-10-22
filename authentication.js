@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 
 const { MongoClient, ObjectID } = require("mongodb");
 const URL = process.env.dbURL;
-const DB = "myDB";
+const DB = "quizdatabase";
 
  function authorized(req, res, next) {
   if (req.headers.authorization) {
